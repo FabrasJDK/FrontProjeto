@@ -1,0 +1,201 @@
+/* Reset / base */
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Calistoga', Arial, sans-serif;
+    background: #14284d;
+}
+
+/* Cabeçalho */
+.menu-1 {
+    background: #17324d;
+    color: #fff;
+    padding: 24px 0 16px 0;
+    text-align: left;
+    font-size: 2em;
+    letter-spacing: 2px;
+    box-shadow: 0 2px 8px #0002;
+    position: relative;
+    min-height: 70px;
+}
+.menu-1 h1 {
+    margin: 0;
+    font-size: 2em;
+    cursor: pointer;
+    margin-left: 50px;
+}
+.amarela {
+    width: 100%;
+    height: 8px;
+    background: #f9b233;
+}
+
+/* Container principal */
+.container {
+    min-height: calc(100vh - 86px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    padding: 36px 20px;
+}
+
+/* Título seleção */
+.titulo-selecao {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8em;
+    color: #fff;
+    margin: 0 0 14px 0;
+    font-family: 'Calistoga', Arial, sans-serif;
+    text-shadow: 0 2px 0 rgba(0,0,0,0.3);
+}
+
+/* Caixa de seleção */
+.user-type-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto 20px auto;
+  width: 100%;
+  max-width: 520px;
+}
+
+/* Opções (cada label) */
+.opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  align-items: center;
+}
+
+/* label como flex para garantir alinhamento vertical perfeito */
+.opcao {
+  display: flex;
+  align-items: center;   /* centraliza verticalmente bolinha + texto */
+  gap: 12px;
+  cursor: pointer;
+  width: auto;
+  color: #fff;
+  font-size: 1.15rem;
+  user-select: none;
+}
+
+/* radio - usamos aparência padrão do navegador, mas dimensionamos e colorimos */
+.opcao input[type="radio"] {
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  /* cor do círculo quando marcado (suporte moderno): */
+  accent-color: #007bff;
+  /* garante mesmo comportamento cross-browser */
+  -webkit-appearance: radio;
+  appearance: radio;
+  transform: translateY(0.5px); /* pequena correção visual se necessário */
+}
+
+/* texto da opção */
+.texto-opcao {
+  line-height: 1;
+}
+
+/* Formulário */
+.formulario {
+    max-width: 520px;
+    width: 100%;
+    background: #17324d;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #0003;
+    padding: 32px 36px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 12px auto 0 auto;
+}
+
+/* Títulos do formulário */
+.formulario h2 {
+    color: #fff;
+    font-family: 'Calistoga', Arial, sans-serif;
+    font-size: 1.8em;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+/* Labels dos campos */
+.escrita {
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 6px;
+    margin-top: 12px;
+    font-size: 1.05em;
+    letter-spacing: 1px;
+}
+
+/* Inputs */
+.campo-texto {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 8px;
+    font-size: 1em;
+    background: #eaeaea;
+}
+
+/* Senha */
+.senha-container { display:flex; align-items:center; gap:8px; width:100%; }
+.senha-wrapper { position: relative; width:100%; }
+.senha-wrapper input { width:100%; padding-right:38px; }
+.toggle-senha {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #17324d;
+    user-select: none;
+}
+
+/* Botões */
+.Continuar {
+    background: #f9b233;
+    color: #17324d;
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 1.05em;
+    font-weight: bold;
+    margin-top: 18px;
+    cursor: pointer;
+    width: 100%;
+}
+.Continuar:hover { background: #ffd066; }
+.Voltar {
+    background: #fff;
+    color: #17324d;
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 1.02em;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+.Voltar:hover { background: #eaeaea; }
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .container { padding: 20px 14px; align-items: center; }
+    .formulario { padding: 20px 16px; max-width: 100%; }
+    .titulo-selecao { font-size: 1.4em; }
+    .opcao { font-size: 1em; gap:10px; }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cadastro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Cadastro.css">
+    <script src="JavaCadastro.js" defer></script>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <div class="menu-1">
+        <h1 onclick="window.location.href='index.html'" style="cursor: pointer;">AICS.</h1>
+    </div>
+    <div class="amarela"></div>
+
+    <div class="container">
+        <!-- Seleção de tipo de cadastro (permanece visível após escolha) -->
+        <div id="caixaSelecao" class="user-type-box">
+            <h2 class="titulo-selecao">Escolha de Cadastro</h2>
+
+            <div class="opcoes">
+                <label class="opcao" for="radioFisica">
+                    <input id="radioFisica" type="radio" name="tipo" value="fisica">
+                    <span class="texto-opcao">Pessoa Física</span>
+                </label>
+
+                <label class="opcao" for="radioJuridica">
+                    <input id="radioJuridica" type="radio" name="tipo" value="juridica">
+                    <span class="texto-opcao">Pessoa Jurídica</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Formulário Pessoa Física -->
+        <div class="formulario" id="formFisica" style="display:none;">
+            <div class="caixaPessoaF">
+                <h2>Cadastro Pessoa Física</h2>
+                <p class="escrita">Nome Completo</p>
+                <input class="campo-texto" type="text" placeholder="Digite o nome completo">
+                <p class="escrita">Email</p>
+                <input class="campo-texto" type="text" placeholder="Digite o seu email">
+                <p class="escrita">CPF</p>
+                <input class="campo-texto" type="number" placeholder="Digite o seu CPF">
+                <p class="escrita">CEP</p>
+                <input class="campo-texto" type="text" placeholder="Digite o seu CEP" maxlength="9">
+
+                <p class="escrita">Senha</p>
+                <div class="senha-container">
+                    <div class="senha-wrapper">
+                        <input type="password" id="senha" class="campo-texto" placeholder="Digite sua senha">
+                        <span class="toggle-senha" onclick="mostrarSenha()">🐵</span>
+                    </div>
+                </div>
+
+                <p class="escrita">Confirme sua Senha</p>
+                <div class="senha-container">
+                    <div class="senha-wrapper">
+                        <input type="password" id="senhaNovamente" class="campo-texto" placeholder="Digite sua senha novamente">
+                        <span class="toggle-senha" onclick="mostrarSenhaNovamente()">🐵</span>
+                    </div>
+                </div>
+
+                <button type="button" class="Continuar">Continuar</button>
+                <button type="button" onclick="voltarParaSelecao()" class="Voltar">Voltar</button>
+            </div>
+        </div>
+
+        <!-- Formulário Pessoa Jurídica -->
+        <div class="formulario" id="formJuridica" style="display:none;">
+            <div class="caixaPessoaF">
+                <h2>Cadastro Pessoa Jurídica</h2>
+                <p class="escrita">Razão Social</p>
+                <input class="campo-texto" type="text" placeholder="Digite a razão social">
+                <p class="escrita">CNPJ</p>
+                <input class="campo-texto" type="text" placeholder="Digite o CNPJ">
+                <p class="escrita">Email</p>
+                <input class="campo-texto" type="text" placeholder="Digite o email">
+                <p class="escrita">CEP</p>
+                <input class="campo-texto" type="text" placeholder="Digite o CEP" maxlength="9">
+
+                <p class="escrita">Senha</p>
+                <div class="senha-container">
+                    <div class="senha-wrapper">
+                        <input type="password" id="senhaJuridica" class="campo-texto" placeholder="Digite sua senha">
+                        <span class="toggle-senha" onclick="mostrarSenhaJuridica()">🐵</span>
+                    </div>
+                </div>
+
+                <p class="escrita">Confirme sua Senha</p>
+                <div class="senha-container">
+                    <div class="senha-wrapper">
+                        <input type="password" id="senhaNovamenteJuridica" class="campo-texto" placeholder="Digite sua senha novamente">
+                        <span class="toggle-senha" onclick="mostrarSenhaNovamenteJuridica()">🐵</span>
+                    </div>
+                </div>
+
+                <button type="button" class="Continuar">Continuar</button>
+                <button type="button" onclick="voltarParaSelecao()" class="Voltar">Voltar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
