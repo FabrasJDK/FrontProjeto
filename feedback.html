@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Feedback</title>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="feedback.css">
+    <script src="feedback.js" defer></script>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <div class="menu-1">
+        <h1 onclick="window.location.href='index.html'" style="cursor: pointer;">AICS.</h1>
+    </div>
+    <div class="amarela"></div>
+
+    <div class="container">
+        <!-- Caixa de Feedback -->
+        <div class="formulario">
+            <div class="caixaFeedback">
+                <h2>Deixe seu Feedback</h2>
+
+                <p class="escrita">Nome</p>
+                <input class="campo-texto" type="text" id="nomeFeedback" placeholder="Digite seu nome">
+
+                <p class="escrita">Email</p>
+                <input class="campo-texto" type="email" id="emailFeedback" placeholder="Digite seu email">
+
+                <p class="escrita">Mensagem</p>
+                <textarea class="campo-texto area-texto" id="mensagemFeedback" placeholder="Digite sua mensagem"></textarea>
+
+                <p class="escrita">Nota (1 a 5)</p>
+                <div class="estrelas">
+                    <span class="estrela" data-value="1">&#9733;</span>
+                    <span class="estrela" data-value="2">&#9733;</span>
+                    <span class="estrela" data-value="3">&#9733;</span>
+                    <span class="estrela" data-value="4">&#9733;</span>
+                    <span class="estrela" data-value="5">&#9733;</span>
+                </div>
+                <input type="hidden" id="notaFeedback" value="0">
+
+                <button type="button" class="Continuar" onclick="enviarFeedback()">Enviar</button>
+                <button type="button" onclick="limparFormulario()" class="Voltar">Limpar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

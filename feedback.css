@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #14284d;
+}
+
+.menu-1 {
+    background-color: #17324d; /* nova cor */
+    color: white;
+    padding: 15px;
+    font-family: 'Calistoga', cursive;
+    text-align: center;
+}
+
+.amarela {
+    background-color: #ffc107;
+    height: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 500px;
+}
+
+.caixaFeedback {
+    background: white;
+    padding: 25px;
+    padding-right: 47px; /* aumenta só a direita */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+h2 {
+    font-family: 'Calistoga', cursive;
+    text-align: center;
+}
+
+.escrita {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.campo-texto {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+.campo-texto:focus {
+    border-color: #ffc107;
+    box-shadow: 0 0 5px rgba(255,193,7,0.6);
+}
+
+.area-texto {
+    min-height: 100px;
+    resize: none;
+}
+
+.estrelas {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.estrela {
+    color: #ccc; /* cinza padrão */
+    transition: transform 0.2s, color 0.3s;
+    margin: 0 3px;
+}
+
+.estrela:hover {
+    transform: scale(1.2);
+    color: #ffc107; /* amarelo quando hover */
+}
+.estrela.selecionada {
+    color: #ffc107; /* amarelo quando selecionada */
+}
+
+.Continuar, .Voltar {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.Continuar {
+    background-color: #ffc107;
+    color: #222;
+}
+
+.Continuar:hover {
+    background-color: #e0a800;
+}
+
+.Voltar {
+    background-color: #ddd;
+    color: #222;
+}
+
+.Voltar:hover {
+    background-color: #bbb;
+}
