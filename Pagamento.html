@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Forma de Pagamento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Pagamento.css">
+    <script src="Pagamento.js" defer></script>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <div class="menu-1">
+        <h1 onclick="window.location.href='index.html'" style="cursor: pointer;">AICS.</h1>
+    </div>
+    <div class="amarela"></div>
+
+    <div class="container">
+        <div class="formulario">
+            <div class="caixaPagamento">
+                <h2>Escolha a Forma de Pagamento</h2>
+
+                <div class="opcoes">
+                    <div class="opcao" onclick="selecionarPagamento('pix')">
+                        <img src="img/pix-logo.png" alt="Pix">
+                        <span>Pix</span>
+                    </div>
+
+                    <div class="opcao" onclick="selecionarPagamento('credito')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/633/633611.png" alt="Cartão de Crédito">
+                        <span>Cartão de Crédito</span>
+                    </div>
+
+                    <div class="opcao" onclick="selecionarPagamento('debito')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/633/633611.png" alt="Cartão de Débito">
+                        <span>Cartão de Débito</span>
+                    </div>
+
+                    <div class="opcao" onclick="selecionarPagamento('boleto')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/891/891462.png" alt="Boleto">
+                        <span>Boleto</span>
+                    </div>
+                </div>
+
+                <input type="hidden" id="formaSelecionada" value="">
+
+                <button type="button" class="Continuar" onclick="confirmarPagamento()">Continuar</button>
+                <button type="button" class="Voltar" onclick="limparSelecao()">Limpar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

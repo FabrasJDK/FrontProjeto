@@ -50,3 +50,17 @@ function limparFormulario() {
     notaSelecionada = 0;
     pintarEstrelas(0);
 }
+
+// ...existing code...
+function enviarFeedback() {
+    // ...sua lógica de envio...
+    window.location.href = "Agradecimento.html";
+}
+
+function enviarFeedback() {
+    const nome = document.getElementById('nomeFeedback').value;
+    // Salva o nome no localStorage
+    localStorage.setItem('nomeFeedback', nome);
+    // Redireciona para a página de agradecimento
+    window.location.href = "Agradecimento.html";
+}

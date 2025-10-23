@@ -1,4 +1,4 @@
-/* Reset / base */
+/* Reset e base */
 * { box-sizing: border-box; }
 body {
     margin: 0;
@@ -49,11 +49,10 @@ body {
     font-size: 1.8em;
     color: #fff;
     margin: 0 0 14px 0;
-    font-family: 'Calistoga', Arial, sans-serif;
     text-shadow: 0 2px 0 rgba(0,0,0,0.3);
 }
 
-/* Caixa de seleção */
+/* Caixa seleção */
 .user-type-box {
   display: flex;
   flex-direction: column;
@@ -64,7 +63,7 @@ body {
   max-width: 520px;
 }
 
-/* Opções (cada label) */
+/* Opções */
 .opcoes {
   display: flex;
   flex-direction: column;
@@ -72,36 +71,18 @@ body {
   width: 100%;
   align-items: center;
 }
-
-/* label como flex para garantir alinhamento vertical perfeito */
 .opcao {
   display: flex;
-  align-items: center;   /* centraliza verticalmente bolinha + texto */
+  align-items: center;
   gap: 12px;
   cursor: pointer;
-  width: auto;
   color: #fff;
   font-size: 1.15rem;
-  user-select: none;
 }
-
-/* radio - usamos aparência padrão do navegador, mas dimensionamos e colorimos */
 .opcao input[type="radio"] {
-  margin: 0;
   width: 18px;
   height: 18px;
-  vertical-align: middle;
-  /* cor do círculo quando marcado (suporte moderno): */
-  accent-color: #007bff;
-  /* garante mesmo comportamento cross-browser */
-  -webkit-appearance: radio;
-  appearance: radio;
-  transform: translateY(0.5px); /* pequena correção visual se necessário */
-}
-
-/* texto da opção */
-.texto-opcao {
-  line-height: 1;
+  accent-color: #f9b233;
 }
 
 /* Formulário */
@@ -119,26 +100,14 @@ body {
     margin: 12px auto 0 auto;
 }
 
-/* Títulos do formulário */
-.formulario h2 {
-    color: #fff;
-    font-family: 'Calistoga', Arial, sans-serif;
-    font-size: 1.8em;
-    margin-bottom: 12px;
-    text-align: center;
-}
-
-/* Labels dos campos */
+/* Campos */
 .escrita {
     font-weight: bold;
     color: #fff;
     margin-bottom: 6px;
     margin-top: 12px;
     font-size: 1.05em;
-    letter-spacing: 1px;
 }
-
-/* Inputs */
 .campo-texto {
     width: 100%;
     padding: 10px 12px;
@@ -150,7 +119,6 @@ body {
 }
 
 /* Senha */
-.senha-container { display:flex; align-items:center; gap:8px; width:100%; }
 .senha-wrapper { position: relative; width:100%; }
 .senha-wrapper input { width:100%; padding-right:38px; }
 .toggle-senha {
@@ -161,7 +129,6 @@ body {
     cursor: pointer;
     font-size: 1.2em;
     color: #17324d;
-    user-select: none;
 }
 
 /* Botões */
@@ -178,6 +145,7 @@ body {
     width: 100%;
 }
 .Continuar:hover { background: #ffd066; }
+
 .Voltar {
     background: #fff;
     color: #17324d;
@@ -192,19 +160,13 @@ body {
 }
 .Voltar:hover { background: #eaeaea; }
 
-/* Responsivo */
-@media (max-width: 600px) {
-    .container { padding: 20px 14px; align-items: center; }
-    .formulario { padding: 20px 16px; max-width: 100%; }
-    .titulo-selecao { font-size: 1.4em; }
-    .opcao { font-size: 1em; gap:10px; }
-}
-.texto-login {
+/* Link de cadastro */
+.texto-cadastro {
     margin-top: 18px;
     color: #fff;
 }
-.link-login {
+.link-cadastro {
     color: #f9b233;
     text-decoration: none;
 }
-.link-login:hover { text-decoration: underline; }
+.link-cadastro:hover { text-decoration: underline; }

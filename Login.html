@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Login.css">
+    <script src="Login.js" defer></script>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <div class="menu-1">
+        <h1 onclick="window.location.href='index.html'" style="cursor: pointer;">AICS.</h1>
+    </div>
+    <div class="amarela"></div>
+
+    <div class="container">
+        <!-- Seleção de tipo de login -->
+        <div id="caixaSelecao" class="user-type-box">
+            <h2 class="titulo-selecao">Escolha o tipo de Login</h2>
+
+            <div class="opcoes">
+                <label class="opcao" for="radioFisica">
+                    <input id="radioFisica" type="radio" name="tipo" value="fisica">
+                    <span class="texto-opcao">Pessoa Física</span>
+                </label>
+
+                <label class="opcao" for="radioJuridica">
+                    <input id="radioJuridica" type="radio" name="tipo" value="juridica">
+                    <span class="texto-opcao">Pessoa Jurídica</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Formulário Pessoa Física -->
+        <div class="formulario" id="formFisica" style="display:none;">
+            <h2>Login Pessoa Física</h2>
+            <p class="escrita">Email</p>
+            <input class="campo-texto" type="email" placeholder="Digite seu email">
+
+            <p class="escrita">Senha</p>
+            <div class="senha-container">
+                <div class="senha-wrapper">
+                    <input type="password" id="senhaFisica" class="campo-texto" placeholder="Digite sua senha">
+                    <span class="toggle-senha" onclick="mostrarSenha('senhaFisica', this)">🐵</span>
+                </div>
+            </div>
+
+            <button type="button" class="Continuar">Entrar</button>
+            <button type="button" onclick="voltarParaSelecao()" class="Voltar">Voltar</button>
+
+            <p class="texto-cadastro">Não tem conta? 
+                <a href="Cadastro.html" class="link-cadastro">Cadastre-se</a>
+            </p>
+        </div>
+
+        <!-- Formulário Pessoa Jurídica -->
+        <div class="formulario" id="formJuridica" style="display:none;">
+            <h2>Login Pessoa Jurídica</h2>
+            <p class="escrita">CNPJ</p>
+            <input class="campo-texto" type="text" placeholder="Digite seu CNPJ">
+
+            <p class="escrita">Senha</p>
+            <div class="senha-container">
+                <div class="senha-wrapper">
+                    <input type="password" id="senhaJuridica" class="campo-texto" placeholder="Digite sua senha">
+                    <span class="toggle-senha" onclick="mostrarSenha('senhaJuridica', this)">🐵</span>
+                </div>
+            </div>
+
+            <button type="button" class="Continuar">Entrar</button>
+            <button type="button" onclick="voltarParaSelecao()" class="Voltar">Voltar</button>
+
+            <p class="texto-cadastro">Não tem conta? 
+                <a href="Cadastro.html" class="link-cadastro">Cadastre-se</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

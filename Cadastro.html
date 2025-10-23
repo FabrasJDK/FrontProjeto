@@ -6,7 +6,7 @@
     <title>Cadastro</title>
     <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Cadastro.css">
-    <script src="JavaCadastro.js" defer></script>
+    <script src="Cadastro.js" defer></script>
 </head>
 <body>
     <!-- Cabeçalho -->
@@ -62,10 +62,14 @@
                     </div>
                 </div>
 
-                <button type="button" class="Continuar">Continuar</button>
+                <button type="button" class="Continuar" onclick="window.location.href='Login.html'">Continuar</button>
                 <button type="button" onclick="voltarParaSelecao()" class="Voltar">Voltar</button>
-            </div>
+
+             <p class="texto-login">Já tem uma conta? 
+                <a href="Login.html" class="link-login">Faça login</a>  
+            </p>
         </div>
+    </div>
 
         <!-- Formulário Pessoa Jurídica -->
         <div class="formulario" id="formJuridica" style="display:none;">
@@ -96,8 +100,12 @@
                     </div>
                 </div>
 
-                <button type="button" class="Continuar">Continuar</button>
+                <button type="button" class="Continuar" onclick="window.location.href='Login.html'">Continuar</button>
                 <button type="button" onclick="voltarParaSelecao()" class="Voltar">Voltar</button>
+
+             <p class="texto-login">Já tem uma conta? 
+             <a href="Login.html" class="link-login">Faça login</a>
+             </p>
             </div>
         </div>
     </div>

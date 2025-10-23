@@ -1,0 +1,105 @@
+body { 
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #14284d;
+}
+
+.menu-1 {
+    background-color: #17324d;
+    color: white;
+    padding: 15px;
+    font-family: 'Calistoga', cursive;
+    text-align: center;
+}
+
+.amarela {
+    background-color: #ffc107;
+    height: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 500px;
+}
+
+.caixaPagamento {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+h2 {
+    font-family: 'Calistoga', cursive;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.opcao {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #f9f9f9;
+}
+
+.opcao:hover {
+    border-color: #ffc107;
+    background-color: #fff7e0;
+    transform: scale(1.02);
+}
+
+.opcao.selecionada {
+    border-color: #17324d;
+    background-color: #e0ecff;
+}
+
+.opcao img {
+    width: 45px;
+    height: auto;
+}
+
+.Continuar, .Voltar {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.Continuar {
+    background-color: #ffc107;
+    color: #222;
+}
+
+.Continuar:hover {
+    background-color: #e0a800;
+}
+
+.Voltar {
+    background-color: #ddd;
+    color: #222;
+}
+
+.Voltar:hover {
+    background-color: #bbb;
+}

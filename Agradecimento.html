@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Obrigado pelo Feedback!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Feedback.css">
+</head>
+<body>
+    <div class="menu-1">
+        <h1 onclick="window.location.href='index.html'" style="cursor: pointer;">AICS.</h1>
+    </div>
+    <div class="amarela"></div>
+    <div class="container">
+        <div class="formulario">
+            <div class="caixaFeedback" style="text-align:center;">
+    <h2>Obrigado pelo seu Feedback!</h2>
+    <p class="escrita" style="margin-top:24px;">
+        Obrigado pelo seu feedback, <span id="nome-agradecimento"></span>!<br>
+        Sua opinião é muito importante para nós.<br>
+        Em breve entraremos em contato, se necessário.
+    </p>
+    <button type="button" class="Continuar" onclick="window.location.href='index.html'">Voltar para o início</button>
+</div>
+        </div>
+    </div>
+    <script>
+    // Recupera o nome salvo e exibe na mensagem
+    const nome = localStorage.getItem('nomeFeedback') || '';
+    if (nome) {
+        document.getElementById('nome-agradecimento').textContent = nome;
+    }
+</script>
+</body>
+</html>
